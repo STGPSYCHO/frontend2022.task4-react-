@@ -1,4 +1,4 @@
-export function Usefull_info_right_textblock(props) {
+export function UsefullInfoRightTextblock(props) {
     return(  
     <div className="usefull-info-right__text-block">
         <h3 className="usefull-info-right__subtitle">{props.h}</h3>

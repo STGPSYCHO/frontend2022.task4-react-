@@ -1,4 +1,4 @@
-import {Navigation} from '../components/Navigation'
+import {Navigation} from '../navigation/Navigation'
 
 export function Header(props) {
   return(  

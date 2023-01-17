@@ -1,7 +1,7 @@
-import  {Navigation_list}  from '../components/Navigation_list'
+import  {NavigationList}  from './NavigationList'
 import logo from "../assets/images/logo.png"
 
-export function Navigation_menu(props) {
+export function NavigationMenu(props) {
     return (
     <div className='navigation__menu'>
         <img src={logo} className="navigation__img" alt="Иконка ИКИТ"/>
@@ -9,7 +9,7 @@ export function Navigation_menu(props) {
         <label className='menu-button-container' htmlFor="menu-toggle">
             <div className='menu-button'></div>
         </label> 
-        <Navigation_list/>
+        <NavigationList/>
     </div>
     )
   }

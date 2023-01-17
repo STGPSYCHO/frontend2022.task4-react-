@@ -1,6 +1,6 @@
 import sign_in from "../assets/images/sign-in.png"
 
-export function Sign_in(props) {
+export function SignIn(props) {
     return(  
         <div className="navigation__user sign-in-button">
             <a className="sign-in-button__item-name" href="#">Ваше имя</a>

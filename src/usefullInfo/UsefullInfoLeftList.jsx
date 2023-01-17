@@ -1,5 +1,5 @@
-import {Usefull_info_left_item} from '../components/Usefull_info_left_item'
-export function Usefull_info_left_list({users}) {
+import {UsefullInfoLeftItem} from './UsefullInfoLeftItem'
+export function UsefullInfoLeftList({users}) {
 
     if (!users.length) {
         return (
@@ -11,7 +11,7 @@ export function Usefull_info_left_list({users}) {
     return (
         <ul className='usefull-info-left__list'>
                 {users.map((post) =>
-                <Usefull_info_left_item key={post.id} name={post.name}/>
+                <UsefullInfoLeftItem key={post.id} name={post.name}/>
                 )}
         </ul>
     );

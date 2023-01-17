@@ -1,8 +1,9 @@
 import { useState } from "react"
 
-export function Add_Article({create}) {
+export function AddArticle({create}) {
 
     const [post, setPost] = useState({title: '', text: '',imgsrc:''})
+    const [addButton, setAddButton] = useState(true)
 
     const addNewPost = (e) => {
         e.preventDefault()
@@ -29,7 +30,7 @@ export function Add_Article({create}) {
             setAddButton(true)
         }
     }
-    const [addButton, setAddButton] = useState(true)
+
     return (
         <div className="article-add" >
         <div className="article-add__button" style={addButton ? {} : {display:'none'}}>

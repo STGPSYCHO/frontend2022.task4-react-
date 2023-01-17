@@ -1,7 +1,7 @@
 import {useState} from 'react'
-import {FAQ} from '../components/FAQ'
-import {Add_Article} from '../components/Add_Article'
-import {Article} from '../components/Article'
+import {FAQ} from '../faq/FAQ'
+import {AddArticle} from '../article/AddArticle'
+import {Article} from '../article/Article'
 
 
 const defaultArticles = [{id:1, imgsrc:'./src/assets/images/left.png', alt:"Стол с периферией", 
@@ -18,27 +18,17 @@ export function Posts(props) {
 
 
     const [grid, setGridView] = useState(true)
-
-    function GridViewHandler(){
-        if(grid){}
-        else{
-            setGridView(true)
-        }
-    }
-    function ListViewHandler(){
-        if(grid){
-            setGridView(false)
-        }
-    }
-
     const [articles, setArticle] = useState(defaultArticles)
+
     const createPost = (newPost) => {
         setArticle([...articles, newPost])
     }
-
-
-
-
+    function GridViewHandler(){
+        setGridView(true)
+    }
+    function ListViewHandler(){
+        setGridView(false)
+    }
     return (
         <div className="container">
             <h2 className="page__title-two">Интересные статьи</h2>
@@ -65,7 +55,7 @@ export function Posts(props) {
 
             <p className="page__subtitle-two">Описать, о чем эти статьи, кратко</p>
             <Article gridState={grid} articles={articles}/>
-            <Add_Article create={createPost}/>
+            <AddArticle create={createPost}/>
             <FAQ/>
         </div>
 

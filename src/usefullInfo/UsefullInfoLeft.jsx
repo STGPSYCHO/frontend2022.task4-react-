@@ -1,7 +1,7 @@
-import {Usefull_info_left_list} from '../components/Usefull_info_left_list'
+import {UsefullInfoLeftList} from './UsefullInfoLeftList'
 import {useState, useMemo, useEffect, useRef} from 'react'
 
-export function Usefull_info_left() {
+export function UsefullInfoLeft() {
     const [users, setUsers] = useState([])
     const [query, setQuery] = useState("")
     const inp = useRef()
@@ -34,7 +34,7 @@ export function Usefull_info_left() {
             </div>
         </div>
         <h2 className="usefull-info-left__title">Пользователи</h2>
-        <Usefull_info_left_list users = {searchedUsers}/>
+        <UsefullInfoLeftList users = {searchedUsers}/>
     </article>
   ) 
   }
